@@ -1,3 +1,53 @@
+/** @format */
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    font-family: 'Roboto', sans-serif;
+}
+
+.link {
+	@apply flex flex-col-reverse 
+    px-3 py-2 
+    before:w-[100%] 
+    before:h-[0.1rem] 
+    before:scale-x-0
+    hover:before:scale-x-100
+    before:bg-slate-200 
+    before:origin-left
+    before:block 
+    before:transition
+    before:ease-linear 
+    before:duration-150;
+}
+
+input[type='radio'] + span {
+	@apply px-5 py-2 hover:bg-black hover:bg-opacity-10  rounded-2xl transition-all duration-200 cursor-pointer;
+    
+}
+
+input[type='radio']:checked + span {
+	@apply bg-black bg-opacity-80 text-slate-100;
+}
+
+.AboutUs > h1,
+.AboutUs > h2,
+.AboutUs > p {
+	@apply max-w-4xl;
+    
+}
+
+.AboutUs > h1 {
+    @apply font-extrabold text-4xl my-10
+}
+.AboutUs > h2 {
+    @apply font-bold text-3xl mt-20 mb-8
+}
+.AboutUs > p {
+    @apply font-medium text-lg my-3
+}
+
