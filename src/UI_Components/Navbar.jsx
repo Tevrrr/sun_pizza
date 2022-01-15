@@ -12,7 +12,7 @@ export default function Navbar() {
 		<div className='h-20 bg-orange-500 text-slate-100 p-4'>
 			<div className=' max-w-[1200px] mx-auto flex items-center justify-between'>
 				<Logo />
-				<div className=' flex items-center gap-2 text-lg'>
+				<div className=' hidden sm:flex  items-center gap-2 text-lg'>
 					<Link className='link' to='/'>
 						Главная
 					</Link>

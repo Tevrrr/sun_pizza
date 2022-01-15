@@ -12,6 +12,7 @@
 
 .link {
 	@apply flex flex-col-reverse 
+    whitespace-nowrap
     px-3 py-2 
     before:w-[100%] 
     before:h-[0.1rem] 

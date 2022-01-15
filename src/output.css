@@ -494,6 +494,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: 100vh;
 }
 
+.w-\[350px\]{
+  width: 350px;
+}
+
 .w-full{
   width: 100%;
 }
@@ -502,16 +506,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2rem;
 }
 
-.min-w-\[15rem\]{
-  min-width: 15rem;
+.min-w-\[10rem\]{
+  min-width: 10rem;
 }
 
 .min-w-\[8rem\]{
   min-width: 8rem;
-}
-
-.min-w-\[10rem\]{
-  min-width: 10rem;
 }
 
 .max-w-\[1200px\]{
@@ -520,10 +520,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-4xl{
   max-width: 56rem;
-}
-
-.max-w-xs{
-  max-width: 20rem;
 }
 
 .max-w-2xl{
@@ -548,6 +544,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .items-center{
   align-items: center;
+}
+
+.justify-end{
+  justify-content: flex-end;
 }
 
 .justify-center{
@@ -598,6 +598,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 2px;
 }
 
+.border-orange-600{
+  --tw-border-opacity: 1;
+  border-color: rgb(234 88 12 / var(--tw-border-opacity));
+}
+
 .bg-orange-500{
   --tw-bg-opacity: 1;
   background-color: rgb(249 115 22 / var(--tw-bg-opacity));
@@ -628,6 +633,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-center{
   text-align: center;
+}
+
+.text-right{
+  text-align: right;
 }
 
 .text-2xl{
@@ -699,6 +708,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .link{
   display: flex;
   flex-direction: column-reverse;
+  white-space: nowrap;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
@@ -784,6 +794,12 @@ input[type='radio']:checked + span{
   font-weight: 500;
 }
 
+.hover\:translate-y-1:hover{
+  --tw-translate-y: 0.25rem;
+  -webkit-transform: var(--tw-transform);
+          transform: var(--tw-transform);
+}
+
 .hover\:translate-y-\[-0\.25rem\]:hover{
   --tw-translate-y: -0.25rem;
   -webkit-transform: var(--tw-transform);
@@ -805,9 +821,37 @@ input[type='radio']:checked + span{
   color: rgb(249 115 22 / var(--tw-text-opacity));
 }
 
+@media (min-width: 640px){
+  .sm\:block{
+    display: block;
+  }
+
+  .sm\:flex{
+    display: flex;
+  }
+
+  .sm\:w-\[48\%\]{
+    width: 48%;
+  }
+
+  .sm\:justify-start{
+    justify-content: flex-start;
+  }
+}
+
 @media (min-width: 768px){
+  .md\:w-\[31\%\]{
+    width: 31%;
+  }
+
   .md\:max-w-\[48\%\]{
     max-width: 48%;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:w-\[23\%\]{
+    width: 23%;
   }
 }
 
