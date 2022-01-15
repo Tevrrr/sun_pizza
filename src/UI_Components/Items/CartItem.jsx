@@ -1,9 +1,8 @@
 import React from 'react'
-import Button from './Button';
 
 export default function CartItem({index, name, price, number}) {
     return (
-		<ul className='flex items-center text-lg justify-between'>
+		<ul className='flex items-center text-lg justify-between my-4'>
 			<li className=' grow'>
 				{index} {name}
 			</li>

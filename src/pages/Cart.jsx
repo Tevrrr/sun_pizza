@@ -12,13 +12,8 @@ export default function Cart() {
 				<li className=' grow'>Название</li>
 				<li className=' min-w-[10rem] text-center'>Количество</li>
 				<li className=' min-w-[8rem] text-center '>Цена</li>
-            </ul>
-            <CartItem
-                index={1}
-                name={""}
-                number={1}
-                price={300}
-            />
+			</ul>
+			<CartItem index={1} name={''} number={1} price={300} />
 		</div>
 	);
 }
