@@ -1,29 +1,36 @@
-import React from 'react'
-import Logo from './Items/Logo'
-import Button from './Items/Button'
+/** @format */
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Logo from './Items/Logo';
+import Button from './Items/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
-    return (
-		<div className=' bg-orange-500 text-slate-100 p-4'>
+	return (
+		<div className='h-20 bg-orange-500 text-slate-100 p-4'>
 			<div className=' max-w-[1200px] mx-auto flex items-center justify-between'>
 				<Logo />
 				<div className=' flex items-center gap-2 text-lg'>
-					<a className='link' href='#'>
+					<Link className='link' to='/'>
 						Главная
-					</a>
-					<a className='link' href='#'>
+					</Link>
+					<Link className='link' to='/Contacts'>
 						Контакты
-					</a>
-					<a className='link' href='#'>
+					</Link>
+					<Link className='link' to='/AboutUs'>
 						О нас
-					</a>
+					</Link>
 
-					<Button>
+					<Link
+						className='inline-flex items-center px-4 py-2 gap-2 rounded-md border-2
+                                text-slate-100 bg-orange-500 hover:text-orange-500 hover:bg-slate-50 hover:border-orange-500
+                                duration-200 transition-all font-bold'
+						to='/Cart'>
 						<FontAwesomeIcon icon={faShoppingCart} />
 						Корзина
-					</Button>
+					</Link>
 				</div>
 			</div>
 		</div>
