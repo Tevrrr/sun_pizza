@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './output.css';
 import Navbar from './UI_Components/Navbar';
 import Home from './pages/Home';
@@ -9,6 +9,7 @@ import Contacts from './pages/Contacts';
 import AboutUs from './pages/AboutUs';
 import NotFoundPage from './pages/NotFoundPage';
 import Cart from './pages/Cart';
+import AddNotifier from './UI_Components/addNotifier';
 
 function App() {
 	const [menu, setMenu] = useState([
@@ -67,6 +68,8 @@ function App() {
 	]);
     const [cart, setCart] = useState([]);
     const [TotalPrice, setTotalPrice] = useState(0);
+    const [notifier, setNotifier] = useState(" bottom-[-5rem]");
+    const [timeoutID, setTimeoutID] = useState();
 	function СountTotalPrice() {
 		let i = 0;
 		cart.map((item) => {
@@ -91,6 +94,11 @@ function App() {
 			cart.concat({ title: item.title, price: item.price, number: 1 })
         );
         setTotalPrice(TotalPrice + item.price);
+        setNotifier('');
+        clearTimeout(timeoutID);
+        setTimeoutID(setTimeout(() => {
+			setNotifier(' bottom-[-5rem]');
+		}, 1000));
 
 	}
     function incrementNumber(name) {
@@ -143,6 +151,7 @@ function App() {
 				/>
 				<Route path='*' element={<NotFoundPage />} />
 			</Routes>
+			<AddNotifier notifier={notifier} setNotifier={setNotifier} />
 		</div>
 	);
 }
