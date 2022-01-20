@@ -76,10 +76,17 @@ function App() {
         
 		setTotalPrice(i);
 	}
-	function addItemCart(name) {
+    function addItemCart(name) {
+        if(cart.find((item) => {
+			return item.title === name;
+        })) {
+            incrementNumber(name); 
+            return;
+        }
 		let item = menu.find((item) => {
 			return item.title === name;
         });
+        
 		setCart(
 			cart.concat({ title: item.title, price: item.price, number: 1 })
         );
